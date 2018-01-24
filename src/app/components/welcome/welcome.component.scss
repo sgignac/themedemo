@@ -1,0 +1,34 @@
+//component's variables
+$component-theme: (
+    app-welcome: (
+        h1Color: red,
+        h1BackColor: pink 
+    )
+);
+
+// component theme mixin
+@mixin app-welcome-theme($app-theme){
+
+    // Merging theme variables and 
+    $style: map-merge(
+                    map-get($component-theme, 'app-welcome'), 
+                    map-get($app-theme, 'app-welcome'));
+    
+    // code style here
+    app-welcome{
+        div{
+            width: 100%;
+            text-align: center;
+            h1 {
+                color: map-get($style, 'h1Color');
+                background-color: map-get($style, 'h1BackColor');
+                padding: 10px;
+                text-shadow: black 2px 2px 2px;
+            }
+        }
+    }
+    
+}
+
+// If you are not using to a theme, uncomment this to see the default style
+//@include app-welcome-theme($component-theme);

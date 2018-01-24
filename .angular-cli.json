@@ -19,7 +19,22 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        {
+            "input": "app/themes/theme1/theme1.scss",
+            "output": "themes/theme1",
+            "lazy": true
+        },
+        {
+            "input": "app/themes/theme2/theme2.scss",
+            "output": "themes/theme2",
+            "lazy": true
+        },
+        {
+            "input": "app/themes/theme3/theme3.scss",
+            "output": "themes/theme3",
+            "lazy": true
+        }
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

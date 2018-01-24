@@ -1,0 +1,27 @@
+// THEME 3
+/* You can add global styles to this file, and also import other style files */
+
+// You can add here SASS that is not related to the components
+// but is related to this theme
+
+body{
+    opacity: 1;
+}
+
+// Import theme variables
+@import "./variables";
+
+// Import all components here
+@import "../../components/welcome/welcome.component.scss";
+// ...
+
+@mixin themed-components($theme){
+
+    // Include all components mixin here
+    @include app-welcome-theme($theme);
+    // ...
+
+}
+
+// Write the themed components in the SASS
+@include themed-components($theme);
